@@ -1,4 +1,4 @@
-# Credit Limit Prediction
+# Predição limite do cartão de crédito
 
 ## 📌 Objetivo
 
