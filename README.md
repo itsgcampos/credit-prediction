@@ -1,125 +1,132 @@
-# Customer Segmentation with K-Means
+# Credit Limit Prediction
 
 ## 📌 Objetivo
 
-Segmentar clientes com base em seu comportamento de compra utilizando técnicas de clustering, permitindo identificar perfis distintos e apoiar estratégias de negócio como marketing, retenção e gestão de risco.
+Desenvolver um modelo de regressão capaz de prever o **limite de crédito ideal para clientes**, com base em características financeiras, comportamentais e demográficas.
+
+O objetivo é apoiar decisões de concessão de crédito, equilibrando **risco e rentabilidade**.
 
 ---
 
 ## 🧠 Problema de Negócio
 
-Empresas precisam entender melhor seus clientes para:
+Instituições financeiras precisam definir **quanto de limite conceder a cada cliente**.
 
-- Identificar clientes de alto valor
-- Detectar padrões de comportamento de compra
-- Criar estratégias personalizadas (marketing, crédito, retenção)
-- Reduzir risco associado a determinados perfis
+Um limite inadequado pode gerar:
+
+- 📉 Risco elevado de inadimplência (limite alto demais)
+- 💸 Perda de oportunidade de receita (limite baixo demais)
 
 Este projeto responde:
 
-- Quais são os diferentes perfis de clientes?
-- Como os clientes se comportam em termos de frequência, valor e volume de compras?
-- Como esses perfis podem ser utilizados para decisões estratégicas?
+- Qual o limite ideal para cada cliente?
+- Quais fatores mais influenciam essa decisão?
+- Como otimizar concessão de crédito com base em dados?
 
 ---
 
 ## 📊 Dataset
 
-O conjunto de dados contém transações de compras realizadas por clientes em uma loja online.
+O dataset contém informações financeiras e demográficas de clientes.
 
 ### 📌 Descrição das Variáveis
 
-- **InvoiceNo**
-  Número da fatura (identificador da transação)
+- **Income**
+  Renda do cliente.
 
-- **StockCode**
-  Código único do produto
+- **Limit**
+  Limite de crédito concedido ao cliente (**variável alvo**).
 
-- **Description**
-  Descrição do item comprado
+- **Rating**
+  Score de crédito do cliente.
 
-- **Quantity**
-  Quantidade de itens comprados
+- **Cards**
+  Número de cartões de crédito que o cliente possui.
 
-- **InvoiceDate**
-  Data da compra
+- **Age**
+  Idade do cliente.
 
-- **UnitPrice**
-  Preço unitário do item
+- **Education**
+  Anos de educação do cliente.
 
-- **CustomerID**
-  Identificador único do cliente
+- **Gender**
+  Gênero do cliente.
 
-- **Country**
-  País de residência do cliente
+- **Student**
+  Indica se o cliente é estudante.
+
+- **Married**
+  Indica se o cliente é casado.
 
 ---
 
 ## ⚙️ Metodologia
 
-### 1. Limpeza de Dados
+### 1. Análise Exploratória (EDA)
 
-- Remoção de valores nulos
-- Tratamento de registros inválidos (quantidades negativas, preços inconsistentes)
-
----
-
-### 2. Feature Engineering
-
-Foi aplicada a técnica de **RFM (Recency, Frequency, Monetary)**:
-
-- **Recency (R)**: Tempo desde a última compra
-- **Frequency (F)**: Número de compras realizadas
-- **Monetary (M)**: Valor total gasto pelo cliente
-
-Essas variáveis permitem capturar o comportamento de consumo de cada cliente.
+- Distribuição das variáveis
+- Identificação de outliers
+- Relação entre renda, rating e limite
+- Análise de correlação
 
 ---
 
-### 3. Preparação dos Dados
+### 2. Pré-processamento
 
-- Normalização das variáveis (StandardScaler)
-- Remoção de outliers (opcional, mas recomendado)
+- Tratamento de valores faltantes
+- Encoding de variáveis categóricas:
+  - Gender
+  - Student
+  - Married
+
+- Normalização (quando necessário)
+
+---
+
+### 3. Engenharia de Features
+
+Exemplos:
+
+- Relação entre renda e rating
+- Quantidade de cartões vs limite
+- Faixas de renda
 
 ---
 
 ### 4. Modelagem
 
-- Algoritmo utilizado: **K-Means**
-- Definição do número de clusters utilizando:
-  - Elbow Method
-  - (Opcional) Silhouette Score
+Modelos utilizados:
+
+- Regressão Linear (baseline)
+- OLS
 
 ---
 
-### 5. Segmentação de Clientes
+### 5. Avaliação
 
-Após o clustering, os grupos foram interpretados com base nas variáveis RFM.
+Métricas utilizadas:
 
-Exemplo de segmentos que espera-se encontrar:
-
-- 🟢 Clientes de alto valor (alta frequência e alto gasto)
-- 🟡 Clientes regulares
-- 🔴 Clientes de baixo valor ou inativos
-- 🔵 Novos clientes
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- R² Score
 
 ---
 
 ## 💡 Insights de Negócio
 
-- Clientes de alto valor podem ser priorizados com benefícios exclusivos
-- Clientes inativos podem ser alvo de campanhas de reativação
-- Clientes de baixo valor podem representar maior risco em estratégias de crédito
-- Segmentação permite personalizar ofertas e limites de crédito
+- Clientes com maior **income** e **rating** tendem a possuir limites mais altos
+- Número de cartões influencia diretamente o limite concedido
+- Perfis específicos (ex: estudantes) apresentam limites mais baixos
+- O modelo pode ser utilizado para padronizar decisões de crédito
 
 ---
 
 ## 🚀 Aplicações
 
-- Marketing direcionado
-- Estratégias de retenção
-- Definição de limites de crédito por perfil
-- Identificação de clientes de alto risco
+- Definição automática de limite de crédito
+- Ajuste de limites existentes
+- Estratégias de concessão mais eficientes
+- Redução de risco financeiro
 
 ---
 
@@ -128,12 +135,7 @@ Exemplo de segmentos que espera-se encontrar:
 - Python
 - Pandas
 - Scikit-learn
+- XGBoost
 - Matplotlib / Seaborn
-
----
-
-## 🔮 Próximos Passos
-
-- Testar outros algoritmos (DBSCAN, Hierarchical Clustering)
 
 ---
