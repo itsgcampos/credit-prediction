@@ -97,8 +97,7 @@ Exemplos:
 
 Modelos utilizados:
 
-- Regressão Linear (baseline)
-- OLS
+- Regressão Linear
 
 ---
 
