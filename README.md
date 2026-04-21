@@ -138,3 +138,13 @@ Métricas utilizadas:
 - Matplotlib / Seaborn
 
 ---
+
+## 🧩 Workflow
+
+Para executar o workflow, deve seguir os passos abaixo
+No terminal, executar:
+
+- python main.py train -> para treinar o modelo
+- python main.py predict -> para fazer as predições que devem estar no csv data/raw/credit_to_predict.csv
+
+---
