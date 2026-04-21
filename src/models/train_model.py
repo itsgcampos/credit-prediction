@@ -111,18 +111,6 @@ def train(
     metrics_path: str | Path = DEFAULT_METRICS_PATH,
     processed_path: str | Path = DEFAULT_PROCESSED_PATH,
 ) -> dict:
-    """
-    Função wrapper para treinar o modelo.
-    
-    Args:
-        df: DataFrame opcional (se None, carrega de DEFAULT_RAW_PATH)
-        model_path: Caminho para salvar o modelo
-        metrics_path: Caminho para salvar as métricas
-        processed_path: Caminho para salvar dados processados
-    
-    Returns:
-        Dicionário com paths e métricas
-    """
     raw_path = DEFAULT_RAW_PATH if df is None else None
     
     # Se df foi passado, salvar temporariamente

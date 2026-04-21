@@ -54,17 +54,6 @@ def predict(
     model_path: str | Path = DEFAULT_MODEL_PATH,
     output_path: str | Path = DEFAULT_PREDICTIONS_PATH,
 ) -> Path:
-    """
-    Função wrapper para fazer predições.
-    
-    Args:
-        input_path: Caminho dos dados para prever
-        model_path: Caminho do modelo treinado
-        output_path: Caminho para salvar as predições
-    
-    Returns:
-        Path do arquivo com predições salvo
-    """
     return predict_limits(
         input_path=input_path,
         output_path=output_path,
