@@ -1,0 +1,101 @@
+index,Income,Rating,Cards,Age,Education,Gender,Student,Married,Ethnicity,Balance
+1,62.436,674,5,53,11, Male,No,Yes,Caucasian,284
+2,143.1,340,3,72,13,Female,No,Yes,Asian,396
+3,112.479,663,4,83,11, Male,No,No,Caucasian,11
+4,93.812,195,4,81,10, Male,No,No,African American,1630
+5,31.843,584,3,41,14, Male,Yes,Yes,Asian,1325
+6,31.839,506,4,52,15, Male,Yes,No,African American,1921
+7,18.132,330,3,43,11,Female,No,Yes,African American,1276
+8,131.265,754,2,53,9,Female,Yes,No,African American,498
+9,94.156,270,3,84,19,Female,No,Yes,Caucasian,753
+10,109.13,640,3,23,17, Male,Yes,No,Asian,34
+11,12.882,135,4,84,10, Male,No,Yes,Asian,726
+12,145.787,624,4,38,8, Male,No,No,African American,848
+13,126.542,259,1,45,15,Female,Yes,Yes,Caucasian,89
+14,39.727,798,1,62,10, Male,No,No,Asian,775
+15,35.455,342,2,51,19, Male,Yes,Yes,Asian,604
+16,35.677,185,1,74,17,Female,Yes,Yes,Caucasian,1945
+17,52.594,677,3,78,14, Male,No,No,African American,969
+18,83.466,781,4,23,17, Male,Yes,Yes,African American,1625
+19,70.472,656,1,60,12,Female,No,Yes,African American,1021
+20,50.772,673,1,66,17, Male,No,Yes,Asian,417
+21,95.659,745,2,44,12, Male,Yes,Yes,Caucasian,114
+22,29.529,127,2,70,14, Male,Yes,No,Caucasian,616
+23,50.9,719,3,52,16, Male,Yes,No,Caucasian,1926
+24,61.291,655,4,67,19,Female,No,Yes,Caucasian,1219
+25,73.85,439,2,42,12,Female,Yes,No,Caucasian,825
+26,119.925,430,1,43,8, Male,Yes,Yes,Asian,1524
+27,37.954,739,4,22,17, Male,Yes,Yes,African American,1649
+28,81.993,605,4,83,17, Male,No,No,African American,1516
+29,92.938,447,1,47,8,Female,No,No,African American,1098
+30,16.503,572,2,62,9, Male,No,Yes,Asian,412
+31,95.056,330,1,22,13,Female,No,Yes,Caucasian,1399
+32,33.873,289,4,46,16,Female,Yes,Yes,Asian,1443
+33,19.107,324,5,37,15, Male,No,Yes,African American,728
+34,142.844,484,5,60,12, Male,Yes,Yes,African American,1300
+35,145.188,476,3,53,8,Female,No,Yes,Asian,1020
+36,123.176,382,1,29,14, Male,Yes,No,Asian,760
+37,52.646,732,1,63,12, Male,No,No,Asian,675
+38,23.674,727,3,74,13,Female,No,Yes,Caucasian,1417
+39,105.793,358,3,68,14,Female,No,Yes,Asian,1892
+40,71.621,458,3,59,10, Male,Yes,No,Caucasian,456
+41,27.085,555,4,49,19,Female,Yes,Yes,African American,919
+42,79.325,510,1,62,17,Female,Yes,Yes,Caucasian,191
+43,14.814,748,4,75,10, Male,No,No,Caucasian,738
+44,137.305,417,3,46,12, Male,Yes,No,African American,1712
+45,46.229,776,1,55,13, Male,No,No,African American,1122
+46,102.753,324,4,70,16, Male,No,Yes,Asian,1571
+47,53.64,333,4,45,19, Male,No,No,Asian,977
+48,82.81,783,3,44,12, Male,Yes,Yes,African American,1008
+49,86.539,763,1,33,8, Male,No,No,African American,95
+50,35.88,473,3,80,11,Female,No,No,African American,1687
+51,145.742,771,1,78,12,Female,No,Yes,Asian,662
+52,118.519,707,5,27,19,Female,Yes,Yes,Caucasian,1213
+53,141.53,571,2,77,17,Female,Yes,No,African American,1759
+54,135.276,332,2,56,17,Female,Yes,No,African American,36
+55,93.706,791,2,65,12,Female,Yes,No,Caucasian,1803
+56,139.062,212,3,40,14, Male,No,No,Asian,1392
+57,22.389,596,5,21,11, Male,No,No,African American,1718
+58,37.438,541,1,28,8, Male,No,No,Asian,1548
+59,16.332,663,4,84,12, Male,Yes,Yes,Caucasian,278
+60,55.546,367,1,66,14, Male,Yes,No,Asian,216
+61,64.415,609,4,36,17, Male,Yes,No,African American,866
+62,47.989,485,1,34,17,Female,No,No,Asian,872
+63,126.023,486,5,32,13, Male,Yes,No,Caucasian,1821
+64,59.945,212,4,71,12, Male,No,Yes,Asian,1296
+65,49.331,712,3,43,11, Male,Yes,Yes,Caucasian,1904
+66,85.977,724,1,35,9,Female,No,No,Asian,61
+67,29.729,180,1,48,11, Male,Yes,No,Caucasian,595
+68,122.308,798,4,54,17, Male,No,Yes,Asian,1903
+69,20.437,212,3,22,17,Female,Yes,No,Asian,728
+70,148.164,101,3,52,10, Male,Yes,Yes,Asian,1365
+71,118.114,741,5,43,17, Male,Yes,Yes,African American,396
+72,37.82,319,3,83,8, Male,No,No,African American,698
+73,10.773,665,3,42,15, Male,Yes,Yes,African American,1042
+74,124.165,324,3,71,12,Female,Yes,Yes,African American,176
+75,108.96,484,2,45,11,Female,Yes,Yes,Asian,1635
+76,112.061,502,5,78,15, Male,No,No,African American,395
+77,117.978,737,1,83,14, Male,No,No,African American,444
+78,20.366,229,4,82,9, Male,Yes,Yes,Asian,1256
+79,60.185,152,1,81,8,Female,No,No,African American,1938
+80,26.222,783,5,42,19,Female,Yes,No,African American,75
+81,130.834,771,4,78,18,Female,No,Yes,Asian,264
+82,97.262,515,5,78,11, Male,No,Yes,African American,454
+83,56.326,346,3,42,15, Male,No,No,Caucasian,1819
+84,18.898,538,4,69,19, Male,Yes,No,African American,717
+85,53.538,302,3,72,9, Male,Yes,No,Asian,734
+86,55.526,283,1,62,10, Male,Yes,No,Caucasian,1407
+87,112.145,222,1,26,19,Female,No,No,Asian,1587
+88,99.258,500,4,35,8,Female,Yes,No,Asian,850
+89,134.21,393,4,74,8, Male,Yes,Yes,Caucasian,1529
+90,76.11,379,5,63,10,Female,No,Yes,African American,1390
+91,26.743,709,5,80,18, Male,No,Yes,African American,143
+92,109.854,297,3,57,12, Male,No,No,Asian,884
+93,116.51,610,4,53,19, Male,Yes,No,Asian,1092
+94,88.579,243,1,28,10,Female,No,Yes,Asian,1122
+95,117.935,708,5,73,8, Male,No,No,Asian,395
+96,79.131,300,5,80,8, Male,No,No,Caucasian,1048
+97,83.183,223,1,64,15,Female,Yes,Yes,Caucasian,947
+98,69.856,286,5,64,17, Male,No,Yes,Asian,890
+99,13.559,425,3,25,18, Male,Yes,No,Asian,1492
+100,25.105,563,4,59,19,Female,Yes,Yes,Asian,1507
