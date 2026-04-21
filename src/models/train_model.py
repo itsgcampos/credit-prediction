@@ -8,6 +8,15 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
+from src.config import (
+    DEFAULT_RAW_PATH,
+    DEFAULT_MODEL_PATH,
+    DEFAULT_FEATURE_ARTIFACT_PATH,
+    DEFAULT_METRICS_PATH,
+    DEFAULT_PROCESSED_PATH,
+    TEST_SIZE,
+    RANDOM_STATE,
+)
 from src.data.load_data import load_raw_data
 from src.data.preprocess import clean_credit_data
 from src.features.build_features import build_features_pipeline, select_model_features
@@ -16,12 +25,12 @@ from src.models.evaluate_model import evaluate_regression
 
 def train_linear_regression(
     raw_path: str | Path,
-    model_path: str | Path = "artifacts/model.joblib",
-    feature_artifact_path: str | Path = "artifacts/feature_artifact.joblib",
-    metrics_path: str | Path = "artifacts/train_metrics.json",
-    processed_output_path: str | Path | None = "data/processed/credit_processed.csv",
-    test_size: float = 0.20,
-    random_state: int = 42,
+    model_path: str | Path = DEFAULT_MODEL_PATH,
+    feature_artifact_path: str | Path = DEFAULT_FEATURE_ARTIFACT_PATH,
+    metrics_path: str | Path = DEFAULT_METRICS_PATH,
+    processed_output_path: str | Path | None = DEFAULT_PROCESSED_PATH,
+    test_size: float = TEST_SIZE,
+    random_state: int = RANDOM_STATE,
 ) -> dict:
     df_raw = load_raw_data(raw_path)
     print(f"Base bruta carregada: {df_raw.shape}")
@@ -96,5 +105,47 @@ def train_linear_regression(
     }
 
 
+def train(
+    df: pd.DataFrame | None = None,
+    model_path: str | Path = DEFAULT_MODEL_PATH,
+    metrics_path: str | Path = DEFAULT_METRICS_PATH,
+    processed_path: str | Path = DEFAULT_PROCESSED_PATH,
+) -> dict:
+    """
+    Função wrapper para treinar o modelo.
+    
+    Args:
+        df: DataFrame opcional (se None, carrega de DEFAULT_RAW_PATH)
+        model_path: Caminho para salvar o modelo
+        metrics_path: Caminho para salvar as métricas
+        processed_path: Caminho para salvar dados processados
+    
+    Returns:
+        Dicionário com paths e métricas
+    """
+    raw_path = DEFAULT_RAW_PATH if df is None else None
+    
+    # Se df foi passado, salvar temporariamente
+    if df is not None:
+        temp_path = Path(".temp_train_input.csv")
+        df.to_csv(temp_path, index=False)
+        raw_path = temp_path
+        
+    try:
+        result = train_linear_regression(
+            raw_path=raw_path,
+            model_path=model_path,
+            feature_artifact_path=DEFAULT_FEATURE_ARTIFACT_PATH,
+            metrics_path=metrics_path,
+            processed_output_path=processed_path,
+            test_size=TEST_SIZE,
+            random_state=RANDOM_STATE,
+        )
+        return result
+    finally:
+        if df is not None and Path(raw_path).exists():
+            Path(raw_path).unlink()
+
+
 if __name__ == "__main__":
-    train_linear_regression("data/raw/Credit.csv")
+    train_linear_regression(str(DEFAULT_RAW_PATH))

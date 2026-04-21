@@ -4,6 +4,12 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
+from src.config import (
+    DEFAULT_MODEL_PATH,
+    DEFAULT_FEATURE_ARTIFACT_PATH,
+    DEFAULT_PREDICT_INPUT_PATH,
+    DEFAULT_PREDICTIONS_PATH,
+)
 from src.data.load_data import load_raw_data
 from src.data.preprocess import clean_credit_data
 from src.features.build_features import build_features_pipeline
@@ -12,8 +18,8 @@ from src.features.build_features import build_features_pipeline
 def predict_limits(
     input_path: str | Path,
     output_path: str | Path,
-    model_path: str | Path = "artifacts/model.joblib",
-    feature_artifact_path: str | Path = "artifacts/feature_artifact.joblib",
+    model_path: str | Path = DEFAULT_MODEL_PATH,
+    feature_artifact_path: str | Path = DEFAULT_FEATURE_ARTIFACT_PATH,
 ) -> Path:
     model = joblib.load(model_path)
     feature_artifact = joblib.load(feature_artifact_path)
@@ -43,9 +49,34 @@ def predict_limits(
     return output
 
 
+def predict(
+    input_path: str | Path = DEFAULT_PREDICT_INPUT_PATH,
+    model_path: str | Path = DEFAULT_MODEL_PATH,
+    output_path: str | Path = DEFAULT_PREDICTIONS_PATH,
+) -> Path:
+    """
+    Função wrapper para fazer predições.
+    
+    Args:
+        input_path: Caminho dos dados para prever
+        model_path: Caminho do modelo treinado
+        output_path: Caminho para salvar as predições
+    
+    Returns:
+        Path do arquivo com predições salvo
+    """
+    return predict_limits(
+        input_path=input_path,
+        output_path=output_path,
+        model_path=model_path,
+        feature_artifact_path=DEFAULT_FEATURE_ARTIFACT_PATH,
+    )
+
+
 if __name__ == "__main__":
     saved = predict_limits(
         input_path="data/raw/Credit.csv",
         output_path="data/predictions/credit_predictions.csv",
     )
+    print(f"Predições salvas em: {saved}")
     print(f"Predições salvas em: {saved}")

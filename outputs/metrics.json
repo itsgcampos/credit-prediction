@@ -1,0 +1,31 @@
+{
+  "train_metrics": {
+    "mae": 644.8320791206337,
+    "rmse": 820.3076665070283,
+    "r2": 0.882658359052533
+  },
+  "test_metrics": {
+    "mae": 632.1405588650061,
+    "rmse": 776.3235410571858,
+    "r2": 0.851341681619659
+  },
+  "n_train": 300,
+  "n_test": 100,
+  "features_used": [
+    "Income",
+    "Cards",
+    "Age",
+    "Education",
+    "debt_to_income",
+    "cards_per_age",
+    "Gender_Female",
+    "Student_Yes",
+    "Married_Yes",
+    "Ethnicity_Asian",
+    "Ethnicity_Caucasian"
+  ],
+  "leakage_columns_removed": [
+    "Rating",
+    "Balance"
+  ]
+}
