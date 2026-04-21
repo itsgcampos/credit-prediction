@@ -1,3 +1,20 @@
 openpyxl
 statsmodels
 ipykernel==6.29.5
+
+# Manipulação de Dados
+pandas
+numpy
+
+# Machine Learning & Métricas
+scikit-learn
+xgboost
+scipy
+
+# Explicabilidade & Visualização
+shap
+matplotlib
+seaborn
+
+# Desenvolvimento & Notebooks
+notebook
